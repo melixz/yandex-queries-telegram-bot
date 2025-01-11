@@ -1,5 +1,6 @@
 import asyncio
 import aiohttp
+from core.config import YANDEX_API_KEY, YANDEX_USER_ID
 
 
 async def get_hosts(oauth_token, user_id):
@@ -18,13 +19,11 @@ async def get_hosts(oauth_token, user_id):
                 print(f"Статус ответа: {response.status}")
 
                 response_text = await response.text()
-                print(
-                    f"Тело ответа: {response_text}"
-                )  # Логируем полный ответ для анализа
+                print(f"Тело ответа: {response_text}")
 
                 if response.status == 200:
                     data = await response.json()
-                    return data["hosts"]  # Возвращаем список хостов
+                    return data["hosts"]
                 else:
                     print(f"Ошибка: {response.status}, {response_text}")
                     return None
@@ -34,8 +33,8 @@ async def get_hosts(oauth_token, user_id):
 
 
 async def main():
-    TOKEN = "y0__wgBEIu4670BGJSqNCClt7-AEvotjIBBPNGOODLcTjj5bZ25q7p0"  # Ваш OAuth-токен
-    USER_ID = "398121995"  # Ваш user_id
+    TOKEN = YANDEX_API_KEY
+    USER_ID = YANDEX_USER_ID
 
     hosts = await get_hosts(TOKEN, USER_ID)
     if hosts:

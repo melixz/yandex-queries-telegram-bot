@@ -18,16 +18,15 @@ async def get_top_queries(
     """
     headers = {"Authorization": f"OAuth {YANDEX_API_KEY}"}
 
-    # Устанавливаем временной интервал за последние 30 дней
     date_to = datetime.now()
     date_from = date_to - timedelta(days=30)
 
     params = {
-        "order_by": metric,  # Сортировка по метрике
-        "limit": limit,  # Количество результатов
-        "date_from": date_from.strftime("%Y-%m-%d"),  # Дата начала
-        "date_to": date_to.strftime("%Y-%m-%d"),  # Дата конца
-        "device_type_indicator": device_type,  # Тип устройства
+        "order_by": metric,
+        "limit": limit,
+        "date_from": date_from.strftime("%Y-%m-%d"),
+        "date_to": date_to.strftime("%Y-%m-%d"),
+        "device_type_indicator": device_type,
     }
 
     if query_indicator:
