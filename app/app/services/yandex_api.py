@@ -1,6 +1,6 @@
 import aiohttp
 from datetime import datetime, timedelta
-from app.app.core.config import YANDEX_API_KEY, YANDEX_HOST_ID, YANDEX_USER_ID
+from core.config import YANDEX_API_KEY, YANDEX_HOST_ID, YANDEX_USER_ID
 
 API_URL = "https://api.webmaster.yandex.net/v4"
 

@@ -2,8 +2,8 @@ import asyncio
 from aiogram import Bot, Dispatcher
 from aiogram.types import BotCommand
 from aiogram.fsm.storage.memory import MemoryStorage
-from app.app.handlers import commands
-from app.app.core.config import TELEGRAM_TOKEN
+from handlers import commands
+from core.config import TELEGRAM_TOKEN
 
 
 async def main():

@@ -1,8 +1,9 @@
 from aiogram import Router
 from aiogram.types import Message
 from aiogram.filters import Command
-from app.app.services.yandex_api import get_top_queries
-from app.app.utils.helpers import calculate_ctr
+from services.yandex_api import get_top_queries
+from utils.helpers import calculate_ctr
+
 
 router = Router()
 
