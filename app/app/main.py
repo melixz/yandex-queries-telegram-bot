@@ -7,6 +7,9 @@ from core.config import TELEGRAM_TOKEN
 
 
 async def main():
+    if not TELEGRAM_TOKEN:
+        raise ValueError("TELEGRAM_TOKEN must be set")
+
     bot = Bot(token=TELEGRAM_TOKEN)
     dp = Dispatcher(storage=MemoryStorage())
 

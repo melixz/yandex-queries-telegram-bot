@@ -6,7 +6,7 @@ API_URL = "https://api.webmaster.yandex.net/v4"
 
 
 async def get_top_queries(
-    metric: str, limit: int = 10, query_indicator: str = None, device_type: str = "ALL"
+    metric: str, limit: int = 10, query_indicator: str = "", device_type: str = "ALL"
 ):
     """
     Получает топ поисковых запросов из API Яндекс Вебмастера.
