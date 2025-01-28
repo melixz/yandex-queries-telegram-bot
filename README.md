@@ -13,8 +13,8 @@
 1. **Клонируйте репозиторий**:
 
    ```bash
-   git clone https://github.com/melixz/YandexQueriesTelegramBot.git
-   cd YandexQueriesTelegramBot
+   git clone https://github.com/melixz/yandex-queries-telegram-bot.git
+   cd yandex-queries-telegram-bot
    ```
 
 2. **Настройте переменные окружения** в файле `.env`:
